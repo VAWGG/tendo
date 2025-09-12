@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TENDO ($TENDO) — Way of W</title>
+<meta name="description" content="TENDO ($TENDO) — Walk the Way of W — win or learn, never lose. Meme-style, flat vector, no photos.">
+<style>
+:root{
+  --ink:#0F0F14;
+  --bg:#FFF9F0;
+  --card:#FFFFFF;
+  --indigo:#4B49A5;
+  --gold:#FFD86B;
+  --mint:#C8FFD4;
+  --pink:#FFC6D9;
+  --blue:#BFD7FF;
+  --radius:18px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif;line-height:1.45}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:16px}
+
+/* marquee */
+.marq{position:sticky;top:0;z-index:10;background:#000;color:#fff;border-bottom:2px solid #fff;overflow:hidden;white-space:nowrap}
+.scroll-text{display:inline-block;padding-left:100%;animation:scroll 15s linear infinite;font-weight:900;font-size:12px;letter-spacing:.3px}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+
+/* badges */
+.topbar{display:flex;gap:10px;justify-content:center;align-items:center;padding:12px 0 16px}
+.badge{padding:8px 14px;border:2px solid #000;border-radius:999px;background:#fff;box-shadow:3px 3px 0 #000;font-weight:900}
+.badge.ticker{background:var(--gold)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:22px;align-items:center;border:2px solid #000;border-radius:var(--radius);background:#fff;box-shadow:6px 6px 0 #000;padding:24px}
+.hero h1{font-size:42px;line-height:1.05;margin:0 0 8px 0}
+.sub{color:#666}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.btn{padding:12px 16px;border:2px solid #000;border-radius:14px;box-shadow:3px 3px 0 #000;background:#fff;font-weight:900}
+.btn.primary{background:var(--gold)}
+/* hero art frame */
+.art{border:2px solid #000;border-radius:16px;box-shadow:4px 4px 0 #000;background:linear-gradient(135deg,#f2efff,#fff);display:grid;place-items:center;height:280px;overflow:hidden}
+
+/* sections / cards */
+h3{margin:0 0 8px 0}
+.card{border:2px solid #000;border-radius:var(--radius);background:#fff;box-shadow:5px 5px 0 #000;padding:18px;margin:18px 0}
+.banner{border:2px solid #000;border-radius:var(--radius);background:var(--blue);box-shadow:5px 5px 0 #000;padding:16px;text-align:center;font-weight:900}
+
+/* counters */
+.counters{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.counter{border:2px solid #000;border-radius:14px;background:#fff;box-shadow:3px 3px 0 #000;padding:14px;text-align:center;font-weight:900}
+.counter b{display:block;font-size:28px}
+
+/* grids */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{border:2px solid #000;border-radius:14px;background:#fff;box-shadow:3px 3px 0 #000;padding:14px;text-align:center;font-weight:900}
+
+/* FAQ */
+details{border:2px solid #000;border-radius:12px;padding:10px 12px;background:#fff;box-shadow:2px 2px 0 #000}
+summary{cursor:pointer;font-weight:900}
+
+/* footer */
+.footer{margin:30px 0 60px;text-align:center;color:#777}
+
+/* responsive-lite */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr}
+  .counters{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:1fr}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="marq">
+  <div class="scroll-text">
+    WALK THE WAY • $TENDO • 👁 ⛩ • MYSTERY MODE • WALK THE WAY • $TENDO • 👁 ⛩ • MYSTERY MODE
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="badge ticker">$TENDO</div>
+    <a class="badge" href="https://pump.fun/XXXX" target="_blank" rel="noopener">Buy</a>
+    <a class="badge" href="https://dexscreener.com/solana/XXXX" target="_blank" rel="noopener">Chart</a>
+    <a class="badge" href="https://t.me/tendocoin" target="_blank" rel="noopener">Twitter</a>
+  </div>
+
+  <section class="hero">
+    <div>
+      <h1>Walk the Way of W — win or learn, never lose.</h1>
+      <div class="sub">TENDO = “Way of Heaven”. Flat doodle meme, zero realism. If you know, you know.</div>
+      <div class="btns">
+        <a id="buy" class="btn primary" href="https://pump.fun/XXXX" target="_blank" rel="noopener">Buy $TENDO</a>
+        <a id="chart" class="btn" href="https://dexscreener.com/solana/XXXX" target="_blank" rel="noopener">View Chart</a>
+        <a id="tg" class="btn" href="https://t.me/tendocoin" target="_blank" rel="noopener">Join Twitter</a>
+      </div>
+    </div>
+    <div class="art">
+      <!-- Inline SVG: stylized 天 → W with goofy eyes (flat, thick outline) -->
+      <svg viewBox="0 0 380 220" width="92%" aria-label="TENDO Doodle Logo">
+        <defs>
+          <style>
+            .o{fill:#FFFFFF;stroke:#000;stroke-width:6px;stroke-linejoin:round}
+            .k{fill:#4B49A5;stroke:#000;stroke-width:6px;stroke-linejoin:round}
+            .y{fill:#FFD86B;stroke:#000;stroke-width:6px;stroke-linejoin:round}
+          </style>
+        </defs>
+        <!-- W shape -->
+        <path class="k" d="M22 30 L65 30 L95 150 L140 60 L185 150 L230 60 L275 150 L305 30 L350 30 L300 195 L250 195 L205 115 L160 195 L110 195 Z"/>
+        <!-- Eyes -->
+        <ellipse class="o" cx="145" cy="55" rx="22" ry="18"/>
+        <circle  class="o" cx="190" cy="55" r="18"/>
+        <circle cx="153" cy="58" r="6"/>
+        <circle cx="197" cy="56" r="6"/>
+        <!-- Tiny Torii + eye as motif -->
+        <rect class="y" x="300" y="150" width="50" height="8" rx="4"/>
+        <rect class="y" x="310" y="130" width="30" height="6" rx="3"/>
+        <rect class="y" x="305" y="165" width="40" height="6" rx="3"/>
+        <circle class="o" cx="50" cy="165" r="14"/><circle cx="50" cy="165" r="5"/>
+        <text x="18" y="208" font-size="22" font-weight="900" fill="#000">天 → W</text>
+      </svg>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>What is $TENDO?</h3>
+    <p><b>W = Win.</b> TENDO is a meme about walking the Way — learn or win. Pure curiosity, no realism.</p>
+  </section>
+
+  <section class="banner">We lose time and seek no value — it's our specialty.</section>
+
+  <section class="card counters">
+    <div class="counter" style="background:var(--mint)"><b>1B</b>Total Supply</div>
+    <div class="counter"><b>0%</b>Tax</div>
+    <div class="counter"><b>TBD</b>Liquidity</div>
+    <div class="counter" style="background:var(--pink)"><b>0</b>Promises Made</div>
+  </section>
+
+  <section class="card">
+    <h3>How to Meme</h3>
+    <div class="grid-3">
+      <div class="tile" style="background:#eef2ff">1) Buy</div>
+      <div class="tile" style="background:#fff0f6">2) Hold / Burn</div>
+      <div class="tile" style="background:#f2fff3">3) Meme</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>Tokenomics (placeholder)</h3>
+    <div class="grid-4">
+      <div class="tile">Supply: 1,000,000,000</div>
+      <div class="tile">LP: TBD</div>
+      <div class="tile">Burn: 0%</div>
+      <div class="tile">Treasury: 0%</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>Roadmap</h3>
+    <div class="grid-3">
+      <div class="tile">Phase 1: Launch</div>
+      <div class="tile">Phase 2: Listings</div>
+      <div class="tile">Phase 3: Merch / NFT</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>FAQ</h3>
+    <details open>
+      <summary>Is this financial advice?</summary>
+      <p>No. This is a meme. DYOR.</p>
+    </details>
+    <div style="height:10px"></div>
+    <details>
+      <summary>Where do I buy?</summary>
+      <p>Click “Buy $TENDO” above (replace with Pump.fun / DEX link).</p>
+    </details>
+  </section>
+
+  <div class="footer">© TENDO — Way of W • Flat doodle only • Stay mysterious 👁</div>
+</div>
+</body>
+</html>
