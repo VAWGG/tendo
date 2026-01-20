@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUMP FUND DEVIL - THE MASCOT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #ff0033;
+            --dark-bg: #0a0a0a;
+            --pump-green: #82e259;
+            --text-white: #ffffff;
+            --gold: #ffd700;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-white);
+            font-family: 'Bangers', system-ui; /* Font tiêu đề hoạt hình */
+            overflow-x: hidden;
+            text-align: center;
+            background-image: radial-gradient(circle at center, #2a0000 0%, #000000 70%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- HERO SECTION --- */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            color: var(--primary-red);
+            text-shadow: 3px 3px 0px #fff;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            animation: shake 2s infinite;
+        }
+
+        .subtitle {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 20px;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        /* --- MAIN IMAGE --- */
+        .main-mascot {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            border: 4px solid var(--text-white);
+            box-shadow: 0 0 30px var(--primary-red);
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+
+        .main-mascot:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        /* --- CA BOX --- */
+        .ca-container {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px dashed var(--gold);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            cursor: pointer;
+            position: relative;
+            max-width: 100%;
+            word-break: break-all;
+        }
+
+        .ca-label {
+            color: var(--gold);
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .ca-text {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .copy-tooltip {
+            position: absolute;
+            top: -30px;
+            right: 0;
+            background: var(--pump-green);
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* --- BUTTONS --- */
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--pump-green);
+            color: #000;
+            font-size: 2rem;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 10px;
+            border: 4px solid #000;
+            box-shadow: 5px 5px 0px #fff;
+            transition: all 0.2s;
+            text-transform: uppercase;
+        }
+
+        .cta-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0px #fff;
+            background-color: #6fdc40;
+        }
+
+        .cta-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px #fff;
+        }
+
+        /* --- STORY TEXT --- */
+        .story-box {
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-left: 5px solid var(--primary-red);
+        }
+        .story-box h2 {
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        .story-box p {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        /* --- SLIDESHOW (MARQUEE) --- */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background: var(--primary-red);
+            padding: 10px 0;
+            border-top: 4px solid #fff;
+            white-space: nowrap;
+            margin-top: auto; /* Đẩy xuống đáy */
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+        }
+
+        .marquee-content img {
+            height: 120px;
+            width: auto;
+            margin: 0 10px;
+            border-radius: 10px;
+            border: 2px solid #000;
+            vertical-align: middle;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .ca-text { font-size: 0.8rem; }
+            .main-mascot { max-width: 90%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>The Pump Fund Devil</h1>
+        <div class="subtitle">Brought to you by Pump Fund's New Investment Arm</div>
+
+        <img src="https://placehold.co/500x500/800000/FFF?text=SATAN+IMAGE+HERE" alt="Devil Mascot" class="main-mascot" id="mainImage">
+        
+        <div class="story-box">
+            <h2>$3,000,000 Build in Public Hackathon</h2>
+            <p>
+                It’s time to completely reimagine how early-stage projects are built and funded.
+                <br><br>
+                We are the face of the new era. No VCs, just community. The Devil is in the details, and the details are on the blockchain.
+            </p>
+        </div>
+
+        <div class="ca-container" onclick="copyToClipboard()">
+            <span class="copy-tooltip" id="tooltip">Copied!</span>
+            <span class="ca-label">CONTRACT ADDRESS (Click to Copy):</span>
+            <span class="ca-text">2sMKfzikZrv9acRX2zebD1iWkAynCNEVFYCW6n2Spump</span>
+        </div>
+
+        <a href="https://pump.fun/coin/2sMKfzikZrv9acRX2zebD1iWkAynCNEVFYCW6n2Spump" target="_blank" class="cta-btn">
+            💊 Buy on Pump.fun 💊
+        </a>
+    </div>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <img src="https://placehold.co/200x200/550000/FFF?text=IMG1" alt="meme1">
+            <img src="https://placehold.co/200x200/550000/FFF?text=IMG2" alt="meme2">
+            <img src="https://placehold.co/200x200/550000/FFF?text=IMG3" alt="meme3">
+            <img src="https://placehold.co/200x200/550000/FFF?text=IMG4" alt="meme4">
+            <img src="https://placehold.co/200x200/550000/FFF?text=IMG5" alt="meme5">
+            <img src="https://placehold.co/200x200/550000/FFF?text=IMG1" alt="meme1">
+            <img src="https://placehold.co/200x200/550000/FFF?text=IMG2" alt="meme2">
+            <img src="https://placehold.co/200x200/550000/FFF?text=IMG3" alt="meme3">
+            <img src="https://placehold.co/200x200/550000/FFF?text=IMG4" alt="meme4">
+            <img src="https://placehold.co/200x200/550000/FFF?text=IMG5" alt="meme5">
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            const caText = "2sMKfzikZrv9acRX2zebD1iWkAynCNEVFYCW6n2Spump";
+            navigator.clipboard.writeText(caText).then(() => {
+                const tooltip = document.getElementById("tooltip");
+                tooltip.style.opacity = "1";
+                setTimeout(() => {
+                    tooltip.style.opacity = "0";
+                }, 1500);
+            });
+        }
+    </script>
+
+</body>
+</html>
